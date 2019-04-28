@@ -10,6 +10,13 @@
           <include name="TearDown"/>
         </methods>
       </class> <!-- com.crm.qa.testcases.ContactPageTest -->
+      <class name="com.crm.qa.testcases.HomePageTest">
+        <methods>
+          <include name="verifyCotactLinkTest"/>
+          <include name="TearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.crm.qa.testcases.HomePageTest -->
     </classes>
   </test> <!-- free CRM App test Cases(failed) -->
 </suite> <!-- Failed suite [Free Crm Application Automation Test Suite] -->

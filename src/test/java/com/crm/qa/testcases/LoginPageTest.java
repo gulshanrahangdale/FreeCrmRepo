@@ -1,8 +1,5 @@
 package com.crm.qa.testcases;
 
-import static org.testng.Assert.assertEquals;
-import static org.testng.Assert.assertTrue;
-
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -14,7 +11,7 @@ import com.crm.qa.pages.LoginPage;
 
 public class LoginPageTest extends TestBase{
 	
-	LoginPage loginpage;
+	LoginPage loginPage;
 	HomePage homepage;
 	
 	public LoginPageTest() {
@@ -24,24 +21,24 @@ public class LoginPageTest extends TestBase{
 	@BeforeMethod
 	public void SetUp(){
 		initialization();
-		loginpage=new LoginPage();
+		loginPage=new LoginPage();
 		}
 	
 	@Test(priority=1)
 	public void LoginPageTitleTest(){
-		String loginpgtitle=loginpage.ValidateLoginPageTitle();
-		Assert.assertEquals(loginpgtitle, "#1 Free CRM software in the cloud for sales and service");
+		String loginpgtitle=loginPage.ValidateLoginPageTitle();
+		Assert.assertEquals(loginpgtitle, "CRMPRO - CRM software for customer relationship management, sales, and support.");
 	}
 	
 	@Test(priority=2)
 	public void crmLogoImgTest(){
-		boolean flag=loginpage.ValidateCrmLogo();
+		boolean flag=loginPage.ValidateCrmLogo();
 		Assert.assertTrue(flag);
 	}
 	
 	@Test(priority=3)
 	public void LoginTest(){
-		homepage=loginpage.login(prop.getProperty("username"),prop.getProperty("password"));
+		homepage=loginPage.login(prop.getProperty("username"),prop.getProperty("password"));
 	}
 	
 	
