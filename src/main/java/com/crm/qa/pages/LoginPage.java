@@ -9,7 +9,7 @@ import com.crm.qa.base.TestBase;
 
 public class LoginPage extends TestBase {
 	
-	//Page Factor or Object Repository
+	//Page Factory or Object Repository
 	
 	
 
@@ -27,7 +27,7 @@ public class LoginPage extends TestBase {
 	@FindBy(xpath="//button[@type='button' and @class='btn']")
 	WebElement SignupBtn;
 	
-	@FindBy(xpath="//img[@alt='free crm logo']")
+	@FindBy(xpath="//img[@class='img-responsive']")
 	WebElement CrmLogo;
 	
 	
